@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+  color: #141414;
+  background-color: #fefefe;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h2 {
+  padding: 1.5rem 0;
+}
+
+#logo {
+  text-decoration: none;
+  color: #4fc8ec;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-item {
+  font-size: 1.05rem;
+  padding: 0.5rem;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #141414;
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-form input {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.25rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #141414;
+}
+
+.search-form button {
+  cursor: pointer;
+  background-color:#4fc8ec;
+  color: #fefefe;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #141414;
+  color: #fefefe;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header-container {
+    flex-direction: column;
+  }
+}
