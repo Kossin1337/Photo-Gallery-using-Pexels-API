@@ -11,6 +11,17 @@ let page = 1;
 let fetchLink;
 let currentSearch;
 
+/* NAVIGATION */
+const navigationItems = document.querySelectorAll(".navbar-item");
+
+navigationItems.forEach((navigationItem) => {
+  navigationItem.addEventListener("click", () => {
+    // console.log(navigationItem.textContent);
+    currentSearch = navigationItem.textContent;
+    searchPhotos(currentSearch);
+  });
+});
+
 /* input event Listener */
 searchInput.addEventListener("input", updateInput);
 form.addEventListener("submit", (e) => {
@@ -78,6 +89,7 @@ async function curatedPhotos() {
 }
 
 async function searchPhotos(query) {
+  // if (querry.length === 0) query = piggies;
   clearImages();
   fetchLink = `https://api.pexels.com/v1/search?query=${query}&per_page=${pagePhotos}`;
   const data = await fetchApi(fetchLink);

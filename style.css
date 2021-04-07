@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   background-color: #fefefe;
   overflow-x: hidden;
   position: relative;
-  scroll-behavior: smooth;
 }
 
 #scroll-to-top {
@@ -79,12 +79,22 @@ header h2 {
 
 .navbar-item {
   font-size: 1.05rem;
+  font-weight: 500;
   padding: 0.5rem;
 }
 
 .navbar-item a {
   text-decoration: none;
   color: #141414;
+}
+
+.navbar-item a i {
+  line-height: 1.05rem;
+  text-align: center;
+}
+
+.navbar-item:hover a {
+  color: #4fc8ec;
 }
 
 .search-form {
@@ -97,6 +107,7 @@ header h2 {
   width: 100%;
   border: none;
   border-radius: 5px;
+  background-color: #fefefe;
   border: 1px solid #141414;
 }
 
@@ -105,15 +116,17 @@ header h2 {
   background-color: #4fc8ec;
   color: #fefefe;
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
   font-size: 0.9rem;
   font-weight: 600;
   transition: 0.3s ease;
 }
 
 .search-form button:hover {
-  background-color: #141414;
-  color: #fefefe;
+  background-color: #fefefe;
+  color: #4fc8ec;
+  border: 2px solid #4fc8ec;
 }
 
 main {
