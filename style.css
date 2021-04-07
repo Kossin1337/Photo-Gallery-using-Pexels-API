@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -7,9 +7,43 @@
 }
 
 body {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   color: #141414;
   background-color: #fefefe;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+#scroll-to-top {
+  z-index: 999;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 20px;
+  background-color: #4fc8ec;
+  color: #fefefe;
+  text-align: center;
+  font-size: 1.5rem;
+  display: none;
+  opacity: 0;
+  transition: 0.2s ease-out;
+}
+
+#scroll-to-top:hover {
+  background-color: #fefefe;
+  color: #4fc8ec;
+  border: 2px solid #4fc8ec;
+}
+
+#scroll-to-top.active {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 header {
@@ -68,7 +102,7 @@ header h2 {
 
 .search-form button {
   cursor: pointer;
-  background-color:#4fc8ec;
+  background-color: #4fc8ec;
   color: #fefefe;
   border-radius: 5px;
   padding: 0.5rem;
@@ -80,6 +114,102 @@ header h2 {
 .search-form button:hover {
   background-color: #141414;
   color: #fefefe;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  margin-top: 1.25rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fill, 1fr);
+  gap: 1rem;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.image-info {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  color: #fefefe;
+  display: none;
+}
+
+.gallery-image:hover .image-info {
+  display: flex;
+  transition: all 0.4s ease;
+}
+
+.photographer {
+  justify-content: flex-start;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.photographer a {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+.download-img {
+  text-decoration: none;
+  color: #fefefe;
+  padding: 0 0.25rem;
+}
+
+.like {
+  color: #fefefe;
+  padding: 0 0.25rem;
+}
+
+.img-resolution {
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.8rem;
+}
+
+.nav-button {
+  margin: 2rem 0 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.more-button {
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4fc8ec;
+  color: #fefefe;
+  transition: 0.3s ease;
+}
+
+.more-button:hover {
+  background-color: #fefefe;
+  color: #4fc8ec;
+  border: 2px solid #4fc8ec;
 }
 
 @media only screen and (max-width: 1200px) {
